@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handmade Heaven</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color: lightsalmon;
+}
+
+/* NAVBAR */
+.navbars{
+    background-color: rgb(37, 35, 35);
+    padding: 15px;
+    text-align: right;
+}
+.navbars h1{
+    color: brown;
+    text-align: center;
+   
+}
+.navbars h1:hover{
+   color: rgb(9, 93, 136);
+   
+}
+.navbars a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbars a:hover{
+    color: orange;
+    font-size: 20px;
+    text-decoration: dashed;
+}
+
+/* MAIN IMAGE */
+.main{
+    position: relative;
+}
+.main img{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+}
+.sub1{
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    color:white;
+    background: rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
+}
+
+/* GALLERY */
+.gallery, .gallery2{
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.gallery{
+    background: linear-gradient(brown,green);
+}
+.gallery2{
+    background: linear-gradient(green,brown);
+}
+.gallery img, .gallery2 img{
+    width:250px;
+    height:250px;
+    border-radius:10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover, .gallery2 img:hover{
+    transform: scale(1.1);
+}
+
+/* FORM */
+#myForm{
+    background: linear-gradient(rgb(238, 16, 16),green);
+    padding:30px;
+    text-align:center;
+}
+form{
+    display:inline-block;
+    background: linear-gradient(rgb(238, 16, 16),green);
+    padding:20px;
+    border-radius:10px;
+}
+
+form input{
+    padding:8px;
+    width:200px;
+}
+form button{
+    margin-top:10px;
+    padding:10px 20px;
+    background:brown;
+    color:white;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+form button:hover{
+    background:darkred;
+}
+
+/* CONTACT CENTER */
+.contact{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    background-color: beige;
+}
+.c2{
+    width:350px;
+    background:aliceblue;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+/* FOOTER */
+.footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbars">
+    <h1>HANDMADE HEAVEN</h1>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- MAIN -->
+<div class="main" id="home">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.Gkfp2YaYlCemM2LrD2ne1gHaEJ?pid=Api&P=0&h=180" alt="">
+    <div class="sub1">
+        <h1>HANDMADE HEAVEN</h1>
+        <p>Unique handmade crafts supporting local artisans and eco-friendly creativity.</p>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery" id="gallery">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.MJtn5DvLvjcWurDLrPjQGQHaHM?pid=Api&P=0&h=180">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.Ahd2faXr9Nlmq7uJjuC4nAHaLH?pid=Api&P=0&h=180">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.9SLjFmPBYZSrA1u0XHChewHaNK?pid=Api&P=0&h=180">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.I6IEouiGEYyJWm4ISLcwUwHaEK?pid=Api&P=0&h=180">
+</div>
+
+<div class="gallery2">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.wwvvSQ5iSKuEXKwL4x9QqwHaEK?pid=Api&P=0&h=180">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.qknh5hDgzHm_sjbdmiMVEwHaJ3?pid=Api&P=0&h=180">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.msRvthQIB5IbcC1HAvBjEwHaHa?pid=Api&P=0&h=180">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.wM9WRoW6bisMfmUEtOTLNgHaEK?pid=Api&P=0&h=180">
+</div>
+
+<!-- FORM -->
+<div id="myForm">
+<form onsubmit="return validateForm()">
+    <h2>Contact Form</h2>
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+    <div class="c2">
+        <h2>Contact Us</h2>
+        <p><b>Name:</b> Sri Teja</p>
+        <p><b>Email:</b> arugolllusriteja@gmail.com</p>
+        <p><b>Phone:</b> 1234567890</p>
+        <p><b>Instagram:</b> _tejarts4u_</p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© Handmade Heaven | arts and crafts </p>
+</div>
+
+<script>
+function validateForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if(name === "" || email === ""){
+        alert("Please fill all fields!");
+        return false;
+    } else {
+        alert("Form submitted successfully!");
+        return true;
+    }
+}
+</script>
+
+</body>
+</html>
